@@ -2,14 +2,24 @@
   <library name="Generated files" type="javaScript">
     <properties>
       <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/lib/js-ast-file.js" />
+        <item url="file://$PROJECT_DIR$/lib/file-finder.js" />
+        <item url="file://$PROJECT_DIR$/lib/configContainer.js" />
         <item url="file://$PROJECT_DIR$/lib/fileFinder.js" />
+        <item url="file://$PROJECT_DIR$/lib/config-container.js" />
         <item url="file://$PROJECT_DIR$/tests/testFileFinder.js" />
       </sourceFilesUrls>
     </properties>
     <CLASSES>
       <root url="file://$PROJECT_DIR$/server.js" />
       <root url="file://$PROJECT_DIR$/server.js" />
+      <root url="file://$PROJECT_DIR$/lib/configContainer.js" />
       <root url="file://$PROJECT_DIR$/lib/fileFinder.js" />
+      <root url="file://$PROJECT_DIR$/lib/js-ast-file.js" />
+      <root url="file://$PROJECT_DIR$/lib/file-finder.js" />
+      <root url="file://$PROJECT_DIR$/lib/configContainer.js" />
+      <root url="file://$PROJECT_DIR$/lib/fileFinder.js" />
+      <root url="file://$PROJECT_DIR$/lib/config-container.js" />
       <root url="file://$PROJECT_DIR$/tests/testFileFinder.js" />
     </CLASSES>
     <SOURCES />
