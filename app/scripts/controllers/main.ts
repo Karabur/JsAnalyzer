@@ -1,14 +1,18 @@
-var MainController = (function () {
-    function MainController($scope) {
+declare var angular;
+
+
+
+class MainController {
+
+    static $inject = ['$scope'];
+    constructor($scope) {
         $scope.awesomeThings = [
             'TypeScript',
             'AngularJS',
             'Karma'
         ];
     }
-    MainController.$inject = ['$scope'];
-    return MainController;
-})();
+}
 
+//noinspection JSUnusedAssignment
 angular.module('AnalyzerApp').controller('MainCtrl', MainController);
-//@ sourceMappingURL=main.js.map
