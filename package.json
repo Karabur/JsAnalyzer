@@ -1,7 +1,11 @@
 {
   "name": "analyzer",
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "glob": "~3.2.3",
+    "express": "~3.3.4",
+    "q": "~0.9.6"
+  },
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-contrib-copy": "~0.4.1",
@@ -31,8 +35,7 @@
     "karma-requirejs": "0.0.2",
     "karma-coffee-preprocessor": "0.0.2",
     "karma-phantomjs-launcher": "0.0.2",
-    "karma": "~0.9.4",
-    "express": "~3.3.4"
+    "karma": "~0.9.4"
   },
   "engines": {
     "node": ">=0.8.0"
