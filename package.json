@@ -24,7 +24,15 @@
     "matchdep": "~0.1.2",
     "connect-livereload": "~0.2.0",
     "grunt-google-cdn": "~0.2.0",
-    "grunt-ngmin": "~0.0.2"
+    "grunt-ngmin": "~0.0.2",
+    "karma-script-launcher": "0.0.2",
+    "karma-chrome-launcher": "0.0.2",
+    "karma-firefox-launcher": "0.0.3",
+    "karma-requirejs": "0.0.2",
+    "karma-coffee-preprocessor": "0.0.2",
+    "karma-phantomjs-launcher": "0.0.2",
+    "karma": "~0.9.4",
+    "express": "~3.3.4"
   },
   "engines": {
     "node": ">=0.8.0"
