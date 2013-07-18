@@ -16,8 +16,8 @@
       <root url="file://$PROJECT_DIR$/tests/testFileFinder.js" />
       <root url="file://$PROJECT_DIR$/tests/testFileFinder.js" />
       <root url="file://$PROJECT_DIR$/lib/config-container.js" />
-      <root url="file://$PROJECT_DIR$/app/scripts/controllers/main.js" />
       <root url="file://$PROJECT_DIR$/app/scripts/app.js" />
+      <root url="file://$PROJECT_DIR$/app/scripts/controllers/main.js" />
     </CLASSES>
     <SOURCES />
   </library>
