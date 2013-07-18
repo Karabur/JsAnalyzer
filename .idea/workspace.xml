@@ -2,14 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f5dd630-8894-4ed8-8a95-a27df63a26fa" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scripts/.gitignore" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/Analyzer.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dictionaries/ant.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Generated_files.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Generated_files.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Generated_files.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Analyzer.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="2f5dd630-8894-4ed8-8a95-a27df63a26fa" time="1374153742376" ignored="false" />
+    <file path="/Dummy.txt" changelist="2f5dd630-8894-4ed8-8a95-a27df63a26fa" time="1374154544143" ignored="false" />
     <file path="/a.dummy" changelist="2f5dd630-8894-4ed8-8a95-a27df63a26fa" time="1374146358569" ignored="false" />
     <file path="/server.ts" changelist="2f5dd630-8894-4ed8-8a95-a27df63a26fa" time="1374047560447" ignored="false" />
     <file path="/package.json" changelist="2f5dd630-8894-4ed8-8a95-a27df63a26fa" time="1371641478611" ignored="false" />
@@ -27,7 +38,7 @@
     <file path="/js-ast-file.js" changelist="2f5dd630-8894-4ed8-8a95-a27df63a26fa" time="1374047700786" ignored="false" />
     <file path="/app.js" changelist="2f5dd630-8894-4ed8-8a95-a27df63a26fa" time="1374053209204" ignored="false" />
     <file path="/file-finder.js" changelist="2f5dd630-8894-4ed8-8a95-a27df63a26fa" time="1374048286328" ignored="false" />
-    <file path="/.gitignore" changelist="2f5dd630-8894-4ed8-8a95-a27df63a26fa" time="1374154523308" ignored="false" />
+    <file path="/.gitignore" changelist="2f5dd630-8894-4ed8-8a95-a27df63a26fa" time="1374154575396" ignored="false" />
     <file path="/config.js" changelist="2f5dd630-8894-4ed8-8a95-a27df63a26fa" time="1374053453219" ignored="false" />
     <file path="$PROJECT_DIR$/../Web/Multi/js/models/accounts_model.js" changelist="2f5dd630-8894-4ed8-8a95-a27df63a26fa" time="1374059856229" ignored="false" />
     <file path="$PROJECT_DIR$/../Web/Multi/js/components/accounts_container.js" changelist="2f5dd630-8894-4ed8-8a95-a27df63a26fa" time="1374149824933" ignored="false" />
@@ -49,6 +60,7 @@
     <file path="$PROJECT_DIR$/../Web/Mobile/js/mobile_trader.js" changelist="2f5dd630-8894-4ed8-8a95-a27df63a26fa" time="1374149824933" ignored="false" />
     <file path="$PROJECT_DIR$/../Web/etc/Java/commons-protocol-internal/pom.xml" changelist="2f5dd630-8894-4ed8-8a95-a27df63a26fa" time="1374149824933" ignored="false" />
     <file path="$PROJECT_DIR$/../Web/Common/js/server/symbol.js" changelist="2f5dd630-8894-4ed8-8a95-a27df63a26fa" time="1374149824933" ignored="false" />
+    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="2f5dd630-8894-4ed8-8a95-a27df63a26fa" time="1374154575743" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +124,7 @@
       <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="13" selection-start="86" selection-end="86" vertical-scroll-proportion="0.22030237">
+            <state line="3" column="5" selection-start="28" selection-end="28" vertical-scroll-proportion="0.11015119">
               <folding />
             </state>
           </provider>
@@ -640,7 +652,11 @@
       <created>1374153757126</created>
       <updated>1374153757126</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="ignore generated">
+      <created>1374154552095</created>
+      <updated>1374154552095</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -712,7 +728,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="ts back on front-end!" />
+    <option name="LAST_COMMIT_MESSAGE" value="ignore generated" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -733,6 +749,7 @@
     <MESSAGE value="First API function!" />
     <MESSAGE value="separated server config" />
     <MESSAGE value="ts back on front-end!" />
+    <MESSAGE value="ignore generated" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -840,7 +857,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="86" selection-end="86" vertical-scroll-proportion="0.22030237">
+        <state line="3" column="5" selection-start="28" selection-end="28" vertical-scroll-proportion="0.11015119">
           <folding />
         </state>
       </provider>
