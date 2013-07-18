@@ -15,4 +15,6 @@ class MainController {
 }
 
 //noinspection JSUnusedAssignment
-angular.module('AnalyzerApp').controller('MainCtrl', MainController);
+angular.module('AnalyzerApp', ['restangular']).controller('MainCtrl', MainController);
+
+

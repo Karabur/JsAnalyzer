@@ -1,6 +1,6 @@
-'use strict';
+declare var angular;
 
-angular.module('AnalyzerApp', [])
+angular.module('AnalyzerApp',[])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
