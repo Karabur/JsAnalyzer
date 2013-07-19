@@ -1,20 +1,19 @@
 declare var angular;
 
+module Controllers {
+    class MainController {
 
+        static $inject = ['$scope', 'fileList'];
 
-class MainController {
-
-    static $inject = ['$scope'];
-    constructor($scope) {
-        $scope.awesomeThings = [
-            'TypeScript',
-            'AngularJS',
-            'Karma'
-        ];
+        constructor($scope, fileList) {
+            $scope.files = fileList.getFiles();
+        }
     }
+
+    //noinspection JSUnusedAssignment
+    export var mod = mod || angular.module('controllers', ['models']);
+    mod.controller('MainCtrl', MainController);
 }
 
-//noinspection JSUnusedAssignment
-angular.module('AnalyzerApp', ['restangular']).controller('MainCtrl', MainController);
 
 

@@ -1,6 +1,6 @@
 declare var angular;
 
-angular.module('AnalyzerApp',[])
+angular.module('AnalyzerApp',['controllers','models'])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
