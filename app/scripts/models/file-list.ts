@@ -16,7 +16,7 @@ module Models {
         loadDef = null;
         tree:Node = {
             name: 'root',
-            children: {},
+            children: [],
             expanded: true
         };
         all;
@@ -39,14 +39,15 @@ module Models {
                 var tree = this.tree;
                 for (var j = 0; j < path.length; j++) {
                     var name = path[j];
+                    var node:Node = tree.children.filter((node) => {return node.name == name})[0];
 
-                    if (!tree.children[name]) {
-                        var node:Node = {name: name, expanded: false};
+                    if (!node) {
+                        node = {name: name, expanded: false};
                         if (name.match(/.*js$/)) { node.file = true }
-                        else { node.children = {} }
-                        tree.children[name] = node;
+                        else { node.children = [] }
+                        tree.children.push(node);
                     }
-                    tree = tree.children[name];
+                    tree = node;
                 }
             }
             return this.tree;

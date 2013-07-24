@@ -1,14 +1,15 @@
 <script type="text/ng-template" id="tree_item_renderer.html" xmlns="">
     {{node.name}}
     <ul ng-show="node.expanded">
-        <li ng-repeat="(name,node) in node.children" ng-include="'tree_item_renderer.html'" ng-click="node.expanded = !node.expanded" stop-event="click"></li>
+        <li ng-repeat="(name,node) in node.children | orderBy:nameOrder" ng-include="'tree_item_renderer.html'" ng-click="node.expanded = !node.expanded" stop-event="click"></li>
     </ul>
 </script>
 
 
 <div class="hero-unit">
+    <div ng-repeat="node in files.children | orderBy:'name':reverse">{{ name }}</div>
     <h1>{{ title }}</h1>
     <ul class="files-list" >
-        <li ng-repeat="node in files.children" ng-click="node.expanded = !node.expanded " ng-include="'tree_item_renderer.html'"></li>
+        <li ng-repeat="(name, node) in files.children | orderBy:nameOrder" ng-click="node.expanded = !node.expanded " ng-include="'tree_item_renderer.html'" ng-class="{ 'dir-node' : !node.file }"></li>
     </ul>
 </div>

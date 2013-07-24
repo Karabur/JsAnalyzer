@@ -1,7 +1,22 @@
+$color: #0081c2;
 .files-list {
   margin:0;
   padding:0;
   &, ul{
     list-style: none;
+  }
+
+  li {
+    cursor: pointer;
+    border-radius: 3px;
+    padding: 5px;
+    color: $color;
+    margin-bottom: 5px;
+    &:hover {
+      color: white;
+      background-color: $color;
+    }
+    &.dir-node {
+    }
   }
 }
