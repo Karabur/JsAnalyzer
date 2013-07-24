@@ -1,14 +1,14 @@
 <script type="text/ng-template" id="tree_item_renderer.html" xmlns="">
-    {{name}}
-    <ul>
-        <li ng-repeat="(name,node) in node.children" ng-include="'tree_item_renderer.html'"></li>
+    {{node.name}}
+    <ul ng-show="node.expanded">
+        <li ng-repeat="(name,node) in node.children" ng-include="'tree_item_renderer.html'" ng-click="node.expanded = !node.expanded" stop-event="click"></li>
     </ul>
 </script>
 
 
 <div class="hero-unit">
-    <h1>Java Script Rulez!</h1>
-    <ul>
-        <li ng-repeat="(name, node) in files.children" ng-include="'tree_item_renderer.html'"></li>
+    <h1>{{ title }}</h1>
+    <ul class="files-list" >
+        <li ng-repeat="node in files.children" ng-click="node.expanded = !node.expanded " ng-include="'tree_item_renderer.html'"></li>
     </ul>
 </div>

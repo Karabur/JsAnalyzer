@@ -6,6 +6,7 @@ module Models {
         name:string;
         children?;
         file?:boolean;
+        expanded: boolean;
     }
 
     var id = 0;
@@ -15,7 +16,8 @@ module Models {
         loadDef = null;
         tree:Node = {
             name: 'root',
-            children: {}
+            children: {},
+            expanded: true
         };
         all;
 
@@ -39,7 +41,7 @@ module Models {
                     var name = path[j];
 
                     if (!tree.children[name]) {
-                        var node:Node = {name: name};
+                        var node:Node = {name: name, expanded: false};
                         if (name.match(/.*js$/)) { node.file = true }
                         else { node.children = {} }
                         tree.children[name] = node;

@@ -7,6 +7,7 @@ module Controllers {
 
         constructor($scope, fileList) {
             $scope.files = fileList.getFiles();
+            $scope.title = 'Work!'
         }
     }
 

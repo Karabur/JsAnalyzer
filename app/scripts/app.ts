@@ -1,13 +1,17 @@
 declare var angular;
 
-angular.module('AnalyzerApp',['controllers','models'])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
-  });
+module App {
+    export var mod = mod || angular.module('AnalyzerApp',['controllers','models']);
+
+    mod.config(function ($routeProvider) {
+            $routeProvider
+                .when('/', {
+                    templateUrl: 'views/main.html',
+                    controller: 'MainCtrl'
+                })
+                .otherwise({
+                    redirectTo: '/'
+                });
+        });
+}
+
