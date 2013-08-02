@@ -6,17 +6,35 @@ $color: #0081c2;
     list-style: none;
   }
 
+  ul {
+    margin-left: 20px;
+  }
+
   li {
+    position: relative;
     cursor: pointer;
-    border-radius: 3px;
-    padding: 5px;
-    color: $color;
-    margin-bottom: 5px;
-    &:hover {
-      color: white;
-      background-color: $color;
+
+    .title {
+      height: 16px;
+      line-height: 16px;
+      font-size: 14px;
+      border-radius: 3px;
+      padding: 0 5px;
+      padding-left: 25px;
+      &:hover {
+        background-color: #ccc;
+      }
     }
     &.dir-node {
+      &:before {
+        content: '';
+        display:inline-block;
+        width: 16px;
+        height: 16px;
+        background: url('../img/folder.png') no-repeat;
+        position: absolute;
+        left:5px;
+      }
     }
   }
 }

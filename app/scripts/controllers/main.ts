@@ -8,9 +8,7 @@ module Controllers {
         constructor($scope, fileList) {
             $scope.files = fileList.getFiles();
             $scope.title = 'Work!';
-            $scope.nameOrder = function (node) {
-                return !node.file ? '1'+node.name : '2'+node.name;
-            };
+            $scope.nameOrder = (node) => { return !node.file ? '1' + node.name : '2' + node.name; };
         }
 
     }

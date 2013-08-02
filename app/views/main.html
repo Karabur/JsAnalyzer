@@ -1,5 +1,5 @@
 <script type="text/ng-template" id="tree_item_renderer.html" xmlns="">
-    {{node.name}}
+    <div class="title">{{node.name}}</div>
     <ul ng-show="node.expanded">
         <li ng-repeat="(name,node) in node.children | orderBy:nameOrder" ng-include="'tree_item_renderer.html'" ng-click="node.expanded = !node.expanded" stop-event="click"></li>
     </ul>
