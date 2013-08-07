@@ -1,15 +1,20 @@
-<script type="text/ng-template" id="tree_item_renderer.html" xmlns="">
-    <div class="title">{{node.name}}</div>
+<script type="text/ng-template" id="tree-item-renderer.html" xmlns="">
+    <div class="title">
+        <div class="name">{{node.name}}</div>
+        <div ng-show="node.file">({{ node.file.requireCount }}/{{ node.file.requiredFromCount }})</div>
+    </div>
     <ul ng-show="node.expanded">
-        <li ng-repeat="(name,node) in node.children | orderBy:nameOrder" ng-include="'tree_item_renderer.html'" ng-click="node.expanded = !node.expanded" stop-event="click"></li>
+        <li ng-repeat="(name,node) in node.children | orderBy:nameOrder" ng-include="'tree-item-renderer.html'" ng-click="node.expanded = !node.expanded" stop-event="click"></li>
     </ul>
 </script>
 
 
-<div class="hero-unit">
-    <div ng-repeat="node in files.children | orderBy:'name':reverse">{{ name }}</div>
-    <h1>{{ title }}</h1>
+<div class="files-panel">
+    <div class="header">
+
+    </div>
     <ul class="files-list" >
-        <li ng-repeat="(name, node) in files.children | orderBy:nameOrder" ng-click="node.expanded = !node.expanded " ng-include="'tree_item_renderer.html'" ng-class="{ 'dir-node' : !node.file }"></li>
+        <li ng-repeat="(name, node) in files.children | orderBy:nameOrder" ng-click="node.expanded = !node.expanded " ng-include="'tree-item-renderer.html'"
+            ng-class="{ 'dir-node' : !node.file }"></li>
     </ul>
 </div>

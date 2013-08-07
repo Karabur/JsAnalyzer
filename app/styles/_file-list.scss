@@ -1,9 +1,22 @@
 $color: #0081c2;
+
+.files-panel {
+  display: inline-block;
+  background: gray;
+  padding:5px;
+  border-radius: 3px;
+}
+
 .files-list {
+  background: #f7f7f7;
   margin:0;
-  padding:0;
+  padding: 5px;
+  line-height: 19px;
+  border: 1px solid #eee;
+  border-radius: 3px;
   &, ul{
     list-style: none;
+    display: inline-block;
   }
 
   ul {
@@ -15,15 +28,23 @@ $color: #0081c2;
     cursor: pointer;
 
     .title {
-      height: 16px;
-      line-height: 16px;
-      font-size: 14px;
       border-radius: 3px;
-      padding: 0 5px;
-      padding-left: 25px;
       &:hover {
         background-color: #ccc;
       }
+      > div {
+        display: inline-block;
+        margin-right: 5px;
+        &:last-child {
+          margin-right: 0px;
+        }
+      }
+    }
+
+    .title {
+      font-size: 14px;
+      padding: 0 5px;
+      padding-left: 25px;
     }
     &.dir-node {
       &:before {
@@ -33,6 +54,7 @@ $color: #0081c2;
         height: 16px;
         background: url('../img/folder.png') no-repeat;
         position: absolute;
+        top:2px;
         left:5px;
       }
     }

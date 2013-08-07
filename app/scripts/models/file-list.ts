@@ -2,10 +2,16 @@ declare var angular;
 
 module Models {
 
+    interface JsAstFile {
+        name: string
+        requreCount: Number
+        requiredFromCount: Number
+    }
+
     interface Node {
         name:string;
         children?;
-        file?:boolean;
+        file?:JsAstFile;
         expanded: boolean;
     }
 
@@ -31,11 +37,11 @@ module Models {
         };
 
         parseFileList = function (res) {
-            res = res || [];
+            res = res.originalElement || [];
             this.rawFiles = res;
 
             for (var i = 0; i < res.length; i++) {
-                var path = res[i].split('/');
+                var path = res[i].name.split('/');
                 var tree = this.tree;
                 for (var j = 0; j < path.length; j++) {
                     var name = path[j];
@@ -43,7 +49,7 @@ module Models {
 
                     if (!node) {
                         node = {name: name, expanded: false};
-                        if (name.match(/.*js$/)) { node.file = true }
+                        if (name.match(/.*js$/)) { node.file = res[i] }
                         else { node.children = [] }
                         tree.children.push(node);
                     }
@@ -56,6 +62,11 @@ module Models {
 
     export var mod = mod || angular.module('models', ['restangular']).config(function (RestangularProvider) {
         RestangularProvider.setBaseUrl('http://localhost:9001/api');
+        RestangularProvider.setResponseExtractor(function (response) {
+            var newResponse = response;
+            newResponse.originalElement = angular.copy(response);
+            return newResponse
+        });
     });
     mod.service('fileList', FileList)
 }
