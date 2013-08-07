@@ -3,7 +3,7 @@
         <div class="name">{{node.name}}</div>
         <div class="stats" ng-show="node.file">({{ node.file.requireCount }}/{{ node.file.requiredFromCount }})</div>
     </div>
-    <ul ng-show="node.expanded">
+    <ul ng-show="!node.file && node.expanded">
         <li ng-repeat="(name,node) in node.children | orderBy:nameOrder" ng-include="'tree-item-renderer.html'" ng-click="node.expanded = !node.expanded" stop-event="click"
             ng-class="{ 'dir-node' : !node.file }"></li>
     </ul>
