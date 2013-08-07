@@ -39,6 +39,10 @@ $color: #0081c2;
           margin-right: 0px;
         }
       }
+
+      .stats {
+        color:#777;
+      }
     }
 
     .title {
@@ -46,17 +50,20 @@ $color: #0081c2;
       padding: 0 5px;
       padding-left: 25px;
     }
-    &.dir-node {
       &:before {
-        content: '';
+        font-family: 'entypo';
         display:inline-block;
-        width: 16px;
-        height: 16px;
-        background: url('../img/folder.png') no-repeat;
+        font-size:28px;
         position: absolute;
-        top:2px;
         left:5px;
       }
+    &.dir-node:before {
+      content: '\1F4C1';
     }
+
+    &:not(.dir-node):before {
+      content: '\E730';
+    }
+
   }
 }
