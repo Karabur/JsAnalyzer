@@ -9,6 +9,10 @@ module App {
                     templateUrl: 'views/main.html',
                     controller: 'MainCtrl'
                 })
+                .when('/file', {
+                    templateUrl: 'views/file-view.html',
+                    controller: 'FileViewCtrl'
+                })
                 .otherwise({
                     redirectTo: '/'
                 });

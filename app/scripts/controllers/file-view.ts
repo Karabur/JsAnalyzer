@@ -1,19 +1,18 @@
 declare var angular;
 
 module Controllers {
-    class MainController {
+    class FileViewController {
 
         static $inject = ['$scope', 'fileList'];
 
         constructor($scope, fileList) {
-            $scope.title = 'Work!';
         }
 
     }
 
-    //noinspection JSUnusedAssignment
+//    noinspection JSUnusedAssignment
     export var mod = mod || angular.module('controllers', ['models']);
-    mod.controller('MainCtrl', MainController);
+    mod.controller('FileViewCtrl', FileViewController);
 }
 
 

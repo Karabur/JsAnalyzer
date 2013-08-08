@@ -14,13 +14,20 @@ $color: #0081c2;
   line-height: 19px;
   border: 1px solid #eee;
   border-radius: 3px;
-  &, ul{
+  ul {
     list-style: none;
     display: inline-block;
+    margin-left: 20px;
   }
 
-  ul {
-    margin-left: 20px;
+  .root-node {
+    > .title {
+      display: none;
+    }
+
+    > ul {
+      margin: 0;
+    }
   }
 
   li {

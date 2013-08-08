@@ -1,0 +1,27 @@
+<script type="text/ng-template" id="tree-item-renderer.html" xmlns="">
+    <div class="node" ng-class= "{ 'root-node' : node.name=='root'}">
+        <div class="title">
+            <div class="name">{{node.name}}</div>
+            <div class="stats" ng-show="node.file">({{ node.file.requireCount }}/{{ node.file.requiredFromCount }})</div>
+        </div>
+        <ul ng-show="!node.file && node.expanded">
+            <li ng-repeat="(name,node) in node.children | orderBy:nameOrder" ng-include="'tree-item-renderer.html'" ng-click="node.expanded = !node.expanded" stop-event="click"
+                ng-class="{ 'dir-node' : !node.file }"></li>
+        </ul>
+    </div>
+</script>
+
+
+<div class="files-panel">
+    <div class="header">
+
+    </div>
+    <div class="files-list">
+        <ng-include src="'tree-item-renderer.html'"></ng-include>
+    </div>
+
+    <!--<ul class="files-list" >-->
+    <!--<li ng-repeat="(name, node) in files.children | orderBy:nameOrder" ng-click="node.expanded = !node.expanded " ng-include="'tree-item-renderer.html'"-->
+    <!--ng-class="{ 'dir-node' : !node.file }"></li>-->
+    <!--</ul>-->
+</div>
