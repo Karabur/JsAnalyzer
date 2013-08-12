@@ -33,7 +33,8 @@ module Models {
 
         getFiles = function () {
             if (this.loadDef) return this.loadDef;
-            return this.all.getList().then(this.parseFileList.bind(this));
+            this.loadDef = this.all.getList().then(this.parseFileList.bind(this));
+            return this.loadDef;
         };
 
         parseFileList = function (res) {

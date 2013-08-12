@@ -6,7 +6,6 @@ module Controllers {
         static $inject = ['$scope', 'fileList'];
 
         constructor($scope, fileList) {
-            console.log('aaaA');
         }
 
     }
