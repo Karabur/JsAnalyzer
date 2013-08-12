@@ -61,7 +61,7 @@ module Models {
     }
 
     export var mod = mod || angular.module('models', ['restangular']).config(function (RestangularProvider) {
-        RestangularProvider.setBaseUrl('http://localhost:9001/api');
+        RestangularProvider.setBaseUrl('http://localhost:9000/api');
         RestangularProvider.setResponseExtractor(function (response) {
             var newResponse = response;
             newResponse.originalElement = angular.copy(response);
