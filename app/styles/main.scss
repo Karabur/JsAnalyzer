@@ -1,4 +1,4 @@
-@import "../bower_components/bootstrap-sass/lib/bootstrap";
+@import "vars";
 @import "file-list";
 @import "file-details";
 
@@ -23,10 +23,15 @@ html, body {
   box-sizing: border-box;
 }
 
+ul, li {
+  margin: 0;
+  padding: 0;
+}
+
 body {
-    background: #fafafa;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #333;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
+  background: $darkBg;
 }
 
 .container {
@@ -37,11 +42,11 @@ body {
 }
 
 .left-column {
+  background: $lightBg;
 }
 
 .content-column {
   box-shadow: inset 5px 0 15px -3px #ccc;
-  background: #eee;
   align-self: stretch;
   -webkit-flex: 1 0 auto;
   -webkit-align-self: stretch;

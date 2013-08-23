@@ -1,3 +1,25 @@
-.file-details {
+@import 'vars';
 
+.file-details {
+  .header {
+    position: relative;
+    padding: 20px;
+    margin:5px;
+    border-bottom: 1px solid #ddd;
+    display: -webkit-flex;
+
+    .file-name {
+      font-size: 30px;
+    }
+
+    .info-block {
+      position: absolute;
+      right:10px;
+      height: 30px;
+      background: $lightBg;
+      line-height: 20px;
+      padding:5px;
+      border-radius: $radius;
+    }
+  }
 }

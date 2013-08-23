@@ -3,9 +3,13 @@ declare var angular;
 module Controllers {
     class FileDetailsController {
 
-        static $inject = ['$scope', 'fileList'];
+        static $inject = ['$scope', '$routeParams', 'fileList'];
 
-        constructor($scope, fileList) {
+        constructor($scope, $routeParams, fileList) {
+            var name = decodeURIComponent($routeParams.name);
+            console.log(name);
+            $scope.fileName = name;
+            $scope.file = fileList.getFile($scope.fileName);
         }
 
     }

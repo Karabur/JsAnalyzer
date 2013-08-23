@@ -2,7 +2,7 @@
     <div class="node" ng-class= "{ 'root-node' : node.name=='root'}" ng-switch="node.expanded">
         <div class="title">
             <div class="name">{{node.name}}</div>
-            <div class="stats" ng-show="node.file">({{ node.file.requireCount }}/{{ node.file.requiredFromCount }})</div>
+            <div class="stats" ng-show="node.file">({{ node.file.requires.length }}/{{ node.file.requiredFromCount }})</div>
         </div>
         <ul ng-switch-when="true">
             <li ng-repeat="(name,node) in node.children | orderBy:nameOrder" ng-include="'tree-item-renderer.html'" ng-click="onClick(node)" stop-event="click"

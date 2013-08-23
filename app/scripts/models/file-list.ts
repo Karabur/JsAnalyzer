@@ -17,7 +17,7 @@ module Models {
 
     var id = 0;
     class FileList {
-        rawFiles:string[] = [];
+        rawFiles = [];
         id = id++;
         loadDef = null;
         tree:Node = {
@@ -26,6 +26,7 @@ module Models {
             expanded: true
         };
         all;
+        files = {};
 
         constructor(Restangular) {
             this.all = Restangular.all('files');
@@ -37,9 +38,13 @@ module Models {
             return this.loadDef;
         };
 
+        getFile = function(filePath) {
+            return this.getFiles().then(() => {console.log('asd');return this.rawFiles[filePath]});
+        };
+
         parseFileList = function (res) {
             res = res.originalElement || [];
-            this.rawFiles = res;
+            this.rawFiles = {};
 
             for (var i = 0; i < res.length; i++) {
                 var path = res[i].name.split('/');
@@ -56,6 +61,7 @@ module Models {
                     }
                     tree = node;
                 }
+                this.rawFiles[res[i].name] = res[i];
             }
             return this.tree;
         };
