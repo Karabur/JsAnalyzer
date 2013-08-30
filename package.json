@@ -4,7 +4,8 @@
   "dependencies": {
     "glob": "~3.2.3",
     "express": "~3.3.4",
-    "q": "~0.9.6"
+    "q": "~0.9.6",
+    "jade": "~0.35.0"
   },
   "devDependencies": {
     "grunt": "~0.4.1",

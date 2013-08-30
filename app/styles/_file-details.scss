@@ -22,4 +22,38 @@
       border-radius: $radius;
     }
   }
+  .requires-list {
+    margin-left: 10px;
+    display: inline-block;
+    > div, li {
+      background: #ddd;
+      color: #333;
+      margin-right: 5px;
+      padding: 5px;
+      margin-bottom: 5px;
+      border-radius: $radius;
+      border: 1px solid #ccc;
+    }
+    ul {
+      display: inline-block;
+      height: 0;
+      overflow: hidden;
+    }
+    &:hover ul {
+      height: auto;
+    }
+
+    li {
+      cursor: pointer;
+      &:hover {
+        background: #e6e6e6;
+      }
+    }
+
+
+    div {
+      display: inline-block;
+    }
+
+  }
 }

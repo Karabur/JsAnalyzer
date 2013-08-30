@@ -26,6 +26,7 @@ html, body {
 ul, li {
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 body {
@@ -48,6 +49,6 @@ body {
 .content-column {
   box-shadow: inset 5px 0 15px -3px #ccc;
   align-self: stretch;
-  -webkit-flex: 1 0 auto;
+  -webkit-flex: 1 0 0;
   -webkit-align-self: stretch;
 }

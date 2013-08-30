@@ -10,5 +10,12 @@ module App {
                 });
             }
         }
+    });
+
+    mod.filter('fileName', function () {
+        return function (path) {
+            path = path.split('/');
+            return path[path.length-1];
+        }
     })
-};
+}

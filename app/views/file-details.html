@@ -3,4 +3,12 @@
         <span class="file-name">{{ fileName }}</span>
         <div class="info-block">{{ file.requires.length }}/{{ file.requiredFromCount }}</div>
     </div>
+    <div class="requires-list">
+        <div > Requires: {{ file.requires.length }}</div><br/>
+        <ul>
+            <li ng-repeat="require in file.requires">
+                <div>{{ require | fileName }}</div>
+            </li>
+        </ul>
+    </div>
 </div>
