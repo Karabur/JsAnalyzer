@@ -39,7 +39,7 @@ module Models {
         };
 
         getFile = function(filePath) {
-            return this.getFiles().then(() => {console.log('asd');return this.rawFiles[filePath]});
+            return this.getFiles().then(() => {return this.rawFiles[filePath]});
         };
 
         parseFileList = function (res) {

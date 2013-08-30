@@ -1,12 +1,12 @@
 <div class="file-details">
     <div class="header">
-        <span class="file-name">{{ fileName }}</span>
+        <span class="file-name">{{ name }}</span>
         <div class="info-block">{{ file.requires.length }}/{{ file.requiredFromCount }}</div>
     </div>
     <div class="requires-list">
         <div > Requires: {{ file.requires.length }}</div><br/>
         <ul>
-            <li ng-repeat="require in file.requires">
+            <li ng-repeat="require in file.requires" ng-click="onRequireClick(require)">
                 <div>{{ require | fileName }}</div>
             </li>
         </ul>

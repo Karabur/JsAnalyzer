@@ -1,6 +1,7 @@
 declare var angular;
 
 module Controllers {
+    export var mod;
 
     class FileListController {
 
@@ -22,8 +23,6 @@ module Controllers {
         }
     }
 
-//    noinspection JSUnusedAssignment
-    export var mod = mod || angular.module('controllers', ['models']);
     mod.controller('FileListCtrl', FileListController);
 }
 

@@ -1,6 +1,8 @@
 declare var angular;
 
 module Controllers {
+    export var mod;
+
     class FileViewController {
 
         static $inject = ['$scope', 'fileList'];
@@ -10,8 +12,6 @@ module Controllers {
 
     }
 
-//    noinspection JSUnusedAssignment
-    export var mod = mod || angular.module('controllers', ['models']);
     mod.controller('FileViewCtrl', FileViewController);
 }
 
