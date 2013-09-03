@@ -5,7 +5,6 @@ module Controllers {
 
     class FileDetailsController {
 
-        static $inject = ['$scope', '$routeParams', 'fileList', 'pathResolver', '$location'];
         name:string;
 
         constructor($scope, $routeParams, fileList, public pathResolver, public $location) {
@@ -14,6 +13,7 @@ module Controllers {
             $scope.name = name;
             $scope.file = fileList.getFile(name);
             $scope.onRequireClick = this.onRequireClick.bind(this);
+            $scope.$emit('fileSelect', name);
         }
 
         onRequireClick(file) {

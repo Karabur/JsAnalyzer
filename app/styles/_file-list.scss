@@ -37,11 +37,31 @@ $color: #0081c2;
     position: relative;
     cursor: pointer;
 
+    &:before {
+      font-family: 'entypo';
+      display: inline-block;
+      font-size: 28px;
+      position: absolute;
+      left: 5px;
+    }
+
+    &.dir-node:before {
+      content: '\1F4C1';
+    }
+
+    &:not(.dir-node):before {
+      content: '\E730';
+    }
+
     .title {
       border-radius: $radius;
       &:hover {
         background-color: #ccc;
       }
+      &.selected {
+        background-color: #ddd;
+      }
+
       > div {
         display: inline-block;
         margin-right: 5px;
@@ -59,20 +79,6 @@ $color: #0081c2;
       font-size: 14px;
       padding: 0 5px;
       padding-left: 25px;
-    }
-      &:before {
-        font-family: 'entypo';
-        display:inline-block;
-        font-size:28px;
-        position: absolute;
-        left:5px;
-      }
-    &.dir-node:before {
-      content: '\1F4C1';
-    }
-
-    &:not(.dir-node):before {
-      content: '\E730';
     }
 
   }

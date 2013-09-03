@@ -13,6 +13,7 @@ module Models {
         children?;
         file?:JsAstFile;
         expanded: boolean;
+        selected: boolean;
     }
 
     var id = 0;
@@ -21,6 +22,7 @@ module Models {
         id = id++;
         loadDef = null;
         tree:Node = {
+            selected: false,
             name: 'root',
             children: [],
             expanded: true
@@ -54,7 +56,7 @@ module Models {
                     var node:Node = tree.children.filter((node) => {return node.name == name})[0];
 
                     if (!node) {
-                        node = {name: name, expanded: false};
+                        node = {name: name, expanded: false, selected: false};
                         if (name.match(/.*js$/)) { node.file = res[i] }
                         else { node.children = [] }
                         tree.children.push(node);
