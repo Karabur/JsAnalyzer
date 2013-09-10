@@ -2,7 +2,7 @@ declare var angular;
 
 module Models {
 
-    interface JsAstFile {
+    interface JsFile {
         name: string
         requreCount: Number
         requiredFromCount: Number
@@ -11,7 +11,7 @@ module Models {
     interface Node {
         name:string;
         children?;
-        file?:JsAstFile;
+        file?:JsFile;
         expanded: boolean;
         selected: boolean;
     }
